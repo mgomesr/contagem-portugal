@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(./portugal.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-position: center;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.data {
+    background: linear-gradient(90deg, green 0%, red 100%);
+    opacity: 0.85;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 18px 18px 20px 0 black;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data:hover {
+    opacity: 1;   
+}
+
+
+.descricao-opcao {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px 0 black;
+}
+
+.descricao-data {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px 0 black;
+}
+
+.descricao-dias {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px 0 black;
+}
+
+@media screen and (max-width: 1440px) {
+    .data {
+        font-size: 20px;
+    }    
+}
+
+@media screen and (max-width: 1250px) {
+    .data {
+        font-size: 16px;
+    }    
+}
+
+@media screen and (max-width: 1078px) {
+    .data {
+        font-size: 12px;
+    }    
+}
+
+@media screen and (max-width: 900px) {
+    .conteudo {
+        flex-wrap: wrap;
+    }  
+    
+    .data {
+        width: 40%;
+    } 
+}
+
+@media screen and (max-width: 468px) {
+    .data {
+        font-size: 8px;
+    } 
+}
